@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<Pane prefHeight="467.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema_reporte.Informe">
+   <children>
+      <Button fx:id="bt_salir" layoutX="327.0" layoutY="428.0" mnemonicParsing="false" onAction="#eventos" style="-fx-background-radius: 45;" text="Salir" />
+      <Label layoutX="212.0" layoutY="18.0" prefHeight="57.0" prefWidth="324.0" text="SISTEMA DE INFORME">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Text layoutX="35.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <AnchorPane layoutX="29.0" layoutY="105.0" prefHeight="306.0" prefWidth="646.0">
+         <children>
+            <ListView fx:id="lista_informe" layoutX="-18.0" layoutY="31.0" onEditStart="#eventos" prefHeight="306.0" prefWidth="502.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="29.0" layoutY="75.0" prefHeight="26.0" prefWidth="502.0" text="Ultimos reportes recibidos." wrapText="true" />
+   </children>
+</Pane>

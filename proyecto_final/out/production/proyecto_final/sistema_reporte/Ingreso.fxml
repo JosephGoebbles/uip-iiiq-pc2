@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import java.lang.*?>
+<Pane prefHeight="467.0" prefWidth="432.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema_reporte.Controlador">
+   <children>
+      <GridPane alignment="CENTER" hgap="25.0" layoutX="54.0" layoutY="99.0" prefHeight="293.0" prefWidth="324.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="129.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="170.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="94.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="149.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="134.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="*Nombre :" />
+            <Label text="Comentario:" GridPane.rowIndex="3" />
+            <Label text="*Categoría:" GridPane.rowIndex="1" />
+            <Label text="*Nivel de satifacion" GridPane.rowIndex="2" />
+             <ComboBox fx:id="cmb_categoria" layoutX="181.0" layoutY="124.0" prefHeight="26.0" prefWidth="156.0" promptText="sin asignar" style="-fx-background-radius: 15;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                 <items>
+                     <FXCollections fx:factory="observableArrayList">
+                         <String fx:value="Internet" />
+                         <String fx:value="Televisión" />
+                         <String fx:value="Telefonía" />
+                         <String fx:value="Data" />
+                     </FXCollections>
+                 </items>
+                 <cursor>
+                     <Cursor fx:constant="HAND" />
+                 </cursor>
+             </ComboBox>
+
+                   <ComboBox fx:id="cmb_calificacion" layoutX="181.0" layoutY="124.0" prefHeight="26.0" prefWidth="156.0" promptText="sin asignar" style="-fx-background-radius: 15;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                 <items>
+                     <FXCollections fx:factory="observableArrayList">
+                         <String fx:value="Excelente" />
+                         <String fx:value="Muy bueno" />
+                         <String fx:value="Bueno" />
+                         <String fx:value="Regular" />
+                         <String fx:value="Malo" />
+                     </FXCollections>
+                 </items>
+                 <cursor>
+                     <Cursor fx:constant="HAND" />
+                 </cursor>
+             </ComboBox>
+            <TextArea fx:id="txt_comt" prefHeight="87.0" prefWidth="172.0" promptText="Cometarios" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txt_nombre" promptText="empresa" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="bt_salir" layoutX="245.0" layoutY="425.0" mnemonicParsing="false" onAction="#eventos" style="-fx-background-radius: 45;" text="Salir" />
+      <Label layoutX="62.0" layoutY="31.0" prefHeight="57.0" prefWidth="324.0" text="SISTEMA DE INGRESO">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="bt_enviar" layoutX="140.0" layoutY="425.0" mnemonicParsing="false" onAction="#eventos" style="-fx-background-radius: 45;" text="Enviar" />
+      <Text layoutX="35.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   </children>
+</Pane>
